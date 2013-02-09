@@ -1,0 +1,51 @@
+body {
+	font-family: "Comic Sans MS";
+	font-size: 15pt;
+	background: #00ff00;	
+}
+#header {
+	width: 100%;
+	height: 400px;
+	background: url('good/bg.jpg');
+	font-size: 5em;
+	color: #fff;
+}
+
+#menu {
+	margin-left: -5px;
+	float: left;
+}
+#main {	
+	font-family: "Kristen ITC", Times;
+	font-size: 20pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+h1,h2,h3,h4,h5{
+	font-family: Times;
+	color: #fff;
+}
+
+.phone:before{
+	content: url('http://comfortinneurekasprings.com/images/contact/animated-telephone.gif');
+}
+.email:after{
+	content: url('http://www.animatedgif.net/email/mtemailbanner_e0.gif');
+	
+}
+.address:before{
+	content: url('http://www.animatedgif.net/email/post2_e0.gif');
+	
+}
+
+#footer {
+	background-image: url('http://www.hwfarm.com/images/Gifs/Horse_Gifs/horse_7.gif');
+	background-color: #332266;
+	color: #3f006f;
+	height: 200px;
+	
+}
+#footer a {
+	color: #3f0066;
+	
+}
