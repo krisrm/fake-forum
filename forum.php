@@ -101,7 +101,7 @@ include 'head.php';
 						</table>
 					</div>
 					<div class="grid_2 spaced-top">
-						<p><span class="num-people">342</span> people visiting this topic right now.</p>
+						<p><span class="num-people"></span> people visiting this topic right now.</p>
 						<button class="submit spaced-top" >Submit Topic</button>
 					</div>
 				<div class="clr"></div>
@@ -114,11 +114,19 @@ include 'head.php';
 				</span>
 				<br>
 				<script type="text/javascript">
-					var num_people = <?=json_encode($num_people_conditions[$current_case])?>;
+					var num_people_conditions = <?=json_encode($num_people_conditions)?>;
+					var num_people;
 					var timerIntervals = <?=json_encode($timer_intervals)?>;
 					var currentInterval = 0;
 					var currentTime = 0;
 					$(function() {
+						
+						if (/forums/.test(window.location)){
+							num_people = num_people_conditions['High'];
+						} else {
+							num_people = num_people_conditions['Low'];
+						}
+						
 						$('.year').html(new Date().getFullYear());
 						$('.num-people').html(num_people[currentInterval]);
 						setInterval(function(){

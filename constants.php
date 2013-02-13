@@ -42,9 +42,7 @@ $timer_intervals = array(15, 30, 20);
 
 
 
-
-
-//Don't modify below here
+//don't touch this
 class ForumEntry{
 	public $title;
 	public $author;
@@ -58,18 +56,7 @@ class ForumEntry{
 	
 }
 
-$path = pathinfo($_SERVER['PHP_SELF']) ;
-$dirname = $path['dirname'];
-var_dump($path);
-if (preg_match("/forums/",$dirname)){
-	$current_case = "High";	
-} else {
-	$current_case = "Low";
-	
-}
 
-
-include 'local-constants.php';
 ?>
 
 

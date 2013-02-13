@@ -1,3 +1,7 @@
+<?php 
+include 'local-constants.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
