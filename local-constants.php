@@ -1,3 +1,3 @@
 <?php
-$assets = "/assets/";
+$assets = "/fake-forum/assets/";
 ?>
