@@ -46,8 +46,7 @@ class ForumEntry{
 }
 
 
-
-
+include 'local-constants.php';
 ?>
 
 

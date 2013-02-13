@@ -4,14 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title><?=TITLE?></title>
 
-<?php
-$assets = "assets/";
-?>
-
-<link rel="stylesheet" type="text/css" href="assets/css/reset.css" >
-<link rel="stylesheet" type="text/css" href="assets/css/960.css" >
-<link rel="stylesheet" type="text/css" href="assets/css/styles.css" >
-<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css" >
+<link rel="stylesheet" type="text/css" href="<?=$assets?>css/reset.css" >
+<link rel="stylesheet" type="text/css" href="<?=$assets?>css/960.css" >
+<link rel="stylesheet" type="text/css" href="<?=$assets?>css/styles.css" >
+<link rel="stylesheet" type="text/css" href="<?=$assets?>css/jquery-ui.css" >
 
 <!--[if lt IE 7]>
     <style media="screen" type="text/css">
