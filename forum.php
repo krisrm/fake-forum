@@ -5,12 +5,16 @@ include 'head.php';
 <body>
 	<div id="container" class="container_12">
 		<div id="header">
+			<div class="logged-in">
+				Welcome back, <span class="username"><?=USERNAME?></span>
+			</div>
 			<div class="logo">
 				(logo)
 			</div>
 			<div class="title">
-				<?=COMPANY_NAME ?><span class="sub"><?="subtitle" ?></span>
+				<?=COMPANY_NAME ?><span class="sub"><?=SUBTITLE?></span>
 			</div>
+			
 		</div>
 		<div id="menu">
 				<ul class="main-menu">
@@ -81,27 +85,13 @@ include 'head.php';
 								</tr>
 							</thead>
 							<tbody>
+								<?php foreach ($forum_entries as $entry):?>
 								<tr>
 									<td class="icon"><span></span></td>
-									<td><span class="title">Brand 1</span><span class="author">author: <a href="#">Username</a></span></td>
-									<td>48 minutes ago</td>
-								</tr>
-								<tr>
-									<td class="icon"><span></span></td>
-									<td><span class="title">Brand 2</span><span class="author">author: <a href="#">Username</a></span></td>
-									<td>48 minutes ago</td>
-								</tr>
-								<tr>
-									<td class="icon"><span></span></td>
-									<td><span class="title">Brand 3</span><span class="author">author: <a href="#">Username</a></span></td>
-									<td>48 minutes ago</td>
-								</tr>
-								<tr>
-									<td class="icon"><span></span></td>
-									<td><span class="title">Brand 4</span><span class="author">author: <a href="#">Username</a></span></td>
-									<td>48 minutes ago</td>
-								</tr>
-								
+									<td><span class="title"><?=$entry->title?></span><span class="author">author: <a href="#"><?=$entry->author?></a></span></td>
+									<td><?=$entry->time?></td>									
+								</tr>	
+								<?php endforeach;?>
 							</tbody>
 							<tfoot>
 								<tr><td></td>
@@ -125,36 +115,29 @@ include 'head.php';
 				</span>
 				<br>
 				<script type="text/javascript">
+					var num_people = <?=json_encode($num_people_conditions[$current_case])?>;
+					var timerIntervals = <?=json_encode($timer_intervals)?>;
+					var currentInterval = 0;
+					var currentTime = 0;
 					$(function() {
 						$('.year').html(new Date().getFullYear());
+						$('.num-people').html(num_people[currentInterval]);
+						setInterval(function(){
+							currentTime += 1;
+							if (currentTime == timerIntervals[currentInterval]){
+								currentInterval ++;
+								currentInterval %= timerIntervals.length;
+								currentTime = 0;
+								$('.num-people').html(num_people[currentInterval]);
+							}
+							
+						},1000);
 					})
 				</script>
 				<span class="copyright"> &copy; <span class="year">2013</span> <?=COMPANY_NAME ?></span>
 			</div>
 		</div>
 	</div>
-	<!-- 	<div id="outer" class="">
 
-	<div id="header" class="grid_16">
-
-	</div>
-	<div id="main" class="grid_16">
-
-	<div id="footer">
-
-	<div class="container_16">
-	<div class="content">
-	<a href="help.php">Help</a> &ndash; <a href="moderator-contact.php">Moderator Contact</a> &ndash; <a href="faq.php">FAQ</a> &ndash; <a href="tools.php">Tools</a> &ndash; <a href="terms.php">Terms and Conditions</a> &ndash; <a href="sponsors.php">Our Sponsors</a>
-	<br>
-	<script type="text/javascript">
-	$(function() {
-	$('.year').html(new Date().getFullYear());
-	})
-	</script>
-	<span class="copyright"> &copy; <span class="year">2013</span> <?=COMPANY_NAME ?></span>
-	</div>
-	</div>
-	</div>
-	</div>-->
 </body>
 </html>

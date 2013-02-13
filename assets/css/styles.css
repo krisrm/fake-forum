@@ -57,6 +57,18 @@ html, body {
 	color: #aaa;
 	font-style: italic;
 }
+#header .logged-in {
+	display: inline;
+	float: right;
+	position: relative;
+	right: 10px;
+	top: 50px;
+	font-size: 0.9em;
+}
+#header .logged-in .username{
+	font-style: italic;
+	font-weight: bold;	
+}
 
 #menu {
 	background: #301e15;
@@ -215,7 +227,7 @@ p {
 	border-collapse: collapse;
 }
 .forum-posts thead{
-	font-weight: strong;
+	font-weight: bold;
 	color: #f1e5e0;
 }
 
