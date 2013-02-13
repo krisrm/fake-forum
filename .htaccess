@@ -1,0 +1,15 @@
+DirectoryIndex forum.php
+
+RewriteEngine on
+
+ErrorDocument 400 /error.php?no=400
+ErrorDocument 401 /error.php?no=401
+ErrorDocument 403 /error.php?no=403
+ErrorDocument 404 /error.php?no=404
+ErrorDocument 500 /error.php?no=500
+
+RewriteCond $1 !^(forum\.php|assets|robots\.txt)
+RewriteRule ^(.*)$ /forum.php/$1 [L]
+
+AddType application/x-httpd-php53 .php
+
