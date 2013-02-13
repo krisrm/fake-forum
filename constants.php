@@ -13,7 +13,8 @@ define('SUBTITLE','');
 define('USERNAME','ualberta23');
 
 //description used at top of page
-define('DESCRIPTION','description here');
+define('DESCRIPTION',"Description here");
+
 
 //the "fake forum entries". Title, author, and "time created" string
 //to add more, just copy the line
@@ -28,7 +29,7 @@ $forum_entries = array(
 );
 
 //the number of people in each condition. The arrays can be as long or short as
-//you want
+//you want. If you want to add more conditions, let me know
 
 $num_people_conditions = array(
 	"Low" => array(3, 5, 4),
@@ -40,17 +41,7 @@ $num_people_conditions = array(
 $timer_intervals = array(15, 30, 20);
 
 
-//get from URL
-$path = pathinfo($_SERVER['PHP_SELF']) ;
-$dirname = $path['dirname'];
 
-
-if (preg_match("/forums/",$dirname)){
-	$current_case = "High";	
-} else {
-	$current_case = "Low";
-	
-}
 
 
 //Don't modify below here
@@ -64,6 +55,16 @@ class ForumEntry{
 		$this->author = $author;
 		$this->time = $time;
 	}
+	
+}
+
+$path = pathinfo($_SERVER['PHP_SELF']) ;
+$dirname = $path['dirname'];
+var_dump($path);
+if (preg_match("/forums/",$dirname)){
+	$current_case = "High";	
+} else {
+	$current_case = "Low";
 	
 }
 
