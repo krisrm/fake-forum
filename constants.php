@@ -19,13 +19,13 @@ define('DESCRIPTION',"Description here");
 //the "fake forum entries". Title, author, and "time created" string
 //to add more, just copy the line
 $forum_entries = array(
-	new ForumEntry("Brand 1", "jose34","49 minutes ago"),
-	new ForumEntry("Brand 2", "kblack","2 hours ago"),
-	new ForumEntry("Brand 3", "alb3rt","2 hours ago"),
-	new ForumEntry("Brand 4", "33_lee","5 hours ago"),
-	new ForumEntry("Brand 5", "brand_admin","10 hours ago"),
-	new ForumEntry("Brand 6", "brand_admin","10 hours ago"),
-	new ForumEntry("Brand 7", "jose34","1 day ago"),
+	new ForumEntry("Tide", "Tom_Druff","49 minutes ago"),
+	new ForumEntry("Duracell", "Gabe_Lee","2 hours ago"),
+	new ForumEntry("Quaker", "Robin_Ette","2 hours ago"),
+	new ForumEntry("Danone", "Peter_Graham","5 hours ago"),
+	new ForumEntry("Galaxy", "Mark_Power","10 hours ago"),
+	new ForumEntry("Charmin", "Marion_Banks","10 hours ago"),
+	new ForumEntry("Iams", "Lou_Sinclair","1 day ago"),
 );
 
 //the number of people in each condition. The arrays can be as long or short as
