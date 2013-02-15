@@ -161,13 +161,14 @@ include 'head.php';
 					
 					$(function(){
 				var topic = $( "#topic" ),
+				name = $( "#name" ),
 				post = $( "#post" ),
-				allFields = $( [] ).add( topic ).add( post ),
+				allFields = $( [] ).add( topic ).add( post ).add( name ),
 				tips = $( ".validateTips" );
 
 				$( "#dialog-form" ).dialog({
 				autoOpen: false,
-				height: 500,
+				height: 550,
 				width: 600,
 				modal: true,
 				buttons: {
@@ -176,13 +177,14 @@ include 'head.php';
 				allFields.removeClass( "ui-state-error" );
 
 				bValid = bValid && checkLength( topic, "Topic/Brand");
+			 	bValid = bValid && checkLength( name, "Name");
 			 	bValid = bValid && checkLength( post, "Post Body");
 
 
 				if ( bValid ) {
 				$( ".forum-posts tbody" ).prepend( "<tr class='new-row'>" +
 					"<td class='icon'><span></span></td>" +
-					"<td><span class='title'>" + topic.val() + "</span><span class='author'>author: <a href='#'><?=USERNAME?></a></span></td>" +
+					"<td><span class='title'>" + topic.val() + "</span><span class='author'>author: <a href='#'>"+name.val()+"</a></span></td>" +
 					"<td>Just now</td>" +
 					"</tr>" );
 				//$( ".forum-posts tbody :first-child td" ).hide(100);
@@ -239,6 +241,9 @@ include 'head.php';
   <fieldset>
     <label for="topic">Topic/Brand: </label>
     <input type="text" name="topic" id="topic" class="text ui-widget-content ui-corner-all" />
+	<br>
+    <label for="name">Name (First_Last): </label>
+    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
     <br><br>
     <label for="post">Please describe your experience:</label>
     <br>
