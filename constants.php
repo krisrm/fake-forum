@@ -13,7 +13,7 @@ define('SUBTITLE','');
 define('USERNAME','ualberta23');
 
 //description used at top of page
-define('DESCRIPTION',"Description here");
+define('DESCRIPTION',"Welcome to Brand World's forum section! This is a community where you can discuss any of your brand-related thoughts, experiences, and ideas. We welcome all brand-related material and have many subforums specified for different aspects of the marketing and branding world. Please refer to our Forum Rules and Frequently Asked Questions (FAQ) along the sidebar for any questions.");
 
 
 //the "fake forum entries". Title, author, and "time created" string
