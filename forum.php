@@ -61,7 +61,7 @@ include 'head.php';
 					</div>
 					<div class="grid_6 inset">
 						<p>
-							Description here
+							<?=DESCRIPTION?>
 						</p>
 					</div>
 					
