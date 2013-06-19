@@ -101,7 +101,7 @@ include 'head.php';
 						</table>
 					</div>
 					<div class="grid_2 spaced-top">
-						<p><span class="num-people"></span> people visiting this topic right now.</p>
+						<p><span class="num-people"></span> <span class="people-noun">people</span> visiting this topic right now.</p>
 						<button class="submit spaced-top" >Submit Topic</button>
 					</div>
 				<div class="clr"></div>
@@ -137,6 +137,11 @@ include 'head.php';
 								currentTime = 0;
 								$('.num-people').slideUp(function(){
 								$('.num-people').html(num_people[currentInterval]);
+								if (num_people[currentInterval] == 1){
+									$('.people-noun').html("person");
+								} else {									
+									$('.people-noun').html("people");
+								}
 								$('.num-people').slideDown(function(){});
 								});
 								
@@ -242,7 +247,7 @@ include 'head.php';
     <label for="topic">Topic/Brand: </label>
     <input type="text" name="topic" id="topic" class="text ui-widget-content ui-corner-all" />
 	<br>
-    <label for="name">Name (First_Last): </label>
+    <label for="name">Name (First Name_Last Initial): </label>
     <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
     <br><br>
     <label for="post">Please describe your experience:</label>

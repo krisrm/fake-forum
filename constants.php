@@ -19,26 +19,26 @@ define('DESCRIPTION',"Welcome to Brand World's forum section! This is a communit
 //the "fake forum entries". Title, author, and "time created" string
 //to add more, just copy the line
 $forum_entries = array(
-	new ForumEntry("Tide", "Tom_Druff","49 minutes ago"),
-	new ForumEntry("Duracell", "Gabe_Lee","2 hours ago"),
-	new ForumEntry("Quaker", "Robin_Ette","2 hours ago"),
-	new ForumEntry("Danone", "Peter_Graham","5 hours ago"),
-	new ForumEntry("Galaxy", "Mark_Power","10 hours ago"),
-	new ForumEntry("Charmin", "Marion_Banks","10 hours ago"),
-	new ForumEntry("Iams", "Lou_Sinclair","1 day ago"),
+	new ForumEntry("Tide", "Jordan_E","63 minutes ago"),
+	new ForumEntry("Duracell", "Sam_P","65 minutes ago"),
+	new ForumEntry("Quaker", "Alex_S","66 minutes ago"),
+	new ForumEntry("Danone", "Taylor_N","66 minutes ago"),
+	new ForumEntry("Galaxy", "Jaime_P","67 minutes ago"),
+	new ForumEntry("Charmin", "Terry_C","70 minutes ago"),
+	new ForumEntry("Iams", "Avery_S","71 minutes ago"),
 );
 
 //the number of people in each condition. The arrays can be as long or short as
 //you want. If you want to add more conditions, let me know
 
 $num_people_conditions = array(
-	"Low" => array(3, 5, 4),
-	"High"=> array(342, 346, 347));
+	"Low" => array(0, 1, 2),
+	"High"=> array(0, 7, 13));
 	
 //these are the intervals for when the number of people should change
-//eg. Wait 15 seconds, change from 3 to 5, wait 30 seconds and change from 5 to 4,
-//wait 20 seconds and change back from 4 to 3 (in the "Low" condition)
-$timer_intervals = array(15, 30, 20);
+//eg. Wait 15 seconds, change from 0 to 1, wait 30 seconds and change from 1 to 2,
+//wait 320 seconds and change back from 2 to 0 (in the "Low" condition)
+$timer_intervals = array(15, 30, 320);
 
 
 
