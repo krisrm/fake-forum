@@ -36,9 +36,9 @@ $num_people_conditions = array(
 	"High"=> array(0, 7, 13));
 	
 //these are the intervals for when the number of people should change
-//eg. Wait 15 seconds, change from 0 to 1, wait 30 seconds and change from 1 to 2,
-//wait 320 seconds and change back from 2 to 0 (in the "Low" condition)
-$timer_intervals = array(15, 30, 320);
+//eg. Wait 7 seconds, change from 0 to 1, wait 10 seconds and change from 1 to 2,
+//wait 2000 seconds and change back from 2 to 0 (in the "Low" condition)
+$timer_intervals = array(7, 10, 2000);
 
 
 
