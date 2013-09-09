@@ -33,12 +33,12 @@ $forum_entries = array(
 
 $num_people_conditions = array(
 	"Low" => array(0, 1, 2),
-	"High"=> array(0, 7, 13));
+	"High"=> array(151, 153, 154));
 	
 //these are the intervals for when the number of people should change
 //eg. Wait 7 seconds, change from 0 to 1, wait 10 seconds and change from 1 to 2,
 //wait 2000 seconds and change back from 2 to 0 (in the "Low" condition)
-$timer_intervals = array(7, 10, 2000);
+$timer_intervals = array(4, 5, 2000);
 
 
 
