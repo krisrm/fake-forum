@@ -100,8 +100,13 @@ include 'head.php';
 							</tfoot>
 						</table>
 					</div>
+					<?php
+					$is_control_style = "";
+					if (!strpos($_SERVER["REQUEST_URI"],"main") === FALSE)
+						$is_control_style = " style='display:none'";
+					?>
 					<div class="grid_2 spaced-top">
-						<p><span class="num-people"></span> <span class="people-noun">people</span> visiting this topic right now.</p>
+						<p<?=$is_control_style?>><span class="num-people"></span> <span class="people-noun">people</span> visiting this topic right now.</p>
 						<button class="submit spaced-top" >Submit Topic</button>
 					</div>
 				<div class="clr"></div>
