@@ -125,11 +125,16 @@ include 'head.php';
 					var currentInterval = 0;
 					var currentTime = 0;
 					$(function() {
-						
-						if (/forums/.test(window.location)){
+						var loc = window.location;
+						if (/forums/.test(loc)){
 							num_people = num_people_conditions['High'];
+						} else if (/index/.test(loc)){
+							num_people = num_people_conditions['VeryHigh'];
+						} else if (/posts/.test(loc)){
+							num_people = num_people_conditions['Medium'];
 						} else {
 							num_people = num_people_conditions['Low'];
+							
 						}
 						
 						$('.year').html(new Date().getFullYear());

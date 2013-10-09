@@ -33,6 +33,8 @@ $forum_entries = array(
 
 $num_people_conditions = array(
 	"Low" => array(0, 1, 2),
+	"Medium" => array(50,51,52),
+	"VeryHigh" => array(350,351,352),
 	"High"=> array(151, 153, 154));
 	
 //these are the intervals for when the number of people should change
